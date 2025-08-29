@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <style type="text/css" media="all">
+      body{
+  height: 100vh;
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+}
+/* .container{
+  height: 500px;
+  width: 300px;
+  background: red;
+}
+ */
+.inbtn{
+  position: absolute;
+  top:0;
+}
+iframe{
+  margin-top:10px;
+}
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="inbtn">
+    
+    <input type="text" name="ytlink" id="ytlink" value="" />
+    <input type="button" name="" id="setlink" value="Watch" onclick='clicked()'/>
+    
+    </div>
+<iframe id="ifr" width='1200px'height='800px' src="https://www.youtube.com/embed/L3oOldViIgY"
+allowfullscreen='true'>
+</iframe>
+  </body>
+  <script type="text/javascript">
+    let ytlink = document.getElementById('ytlink');
+    let ifr = document.getElementById('ifr');
+    // let watchbtn = document.getElementById('setlink');
+    // let prelink = ;
+    function clicked() {
+      
+      let oflink = 'https://www.youtube.com/embed/' + ytlink.value;
+      ifr.src = oflink;
+      
+    }
+
+    
+  </script>
+  
+  
+</html>
