@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhilash</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="inbtn">
+            <input type="text" name="ytlink" id="ytlink" value autofocus autocomplete="true" />
+            <input type="button" name id="setlink" value="Watch" onclick='clicked()' />
+        </div>
+
+        <iframe id="ifr" src="https://www.youtube.com/embed/" allowfullscreen='true'>
+        </iframe>
+    </div>
+</body>
+<script type="text/javascript">
+    let ytlink = document.getElementById('ytlink');
+    let ifr = document.getElementById('ifr');
+
+    function clicked() {
+
+        let oflink = 'https://www.youtube.com/embed/' + ytlink.value;
+        ifr.src = oflink;
+
+    }
+</script>
+
+</html>
