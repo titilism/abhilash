@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="https://www.youtube.com/s/desktop/271635d3/img/logos/favicon_96x96.png">
-    <title>YouTube</title>
+    <title>Abhilash</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -19,16 +18,20 @@
         <iframe id="ifr" src="https://www.youtube.com/embed/" allowfullscreen='true'>
         </iframe>
     </div>
+    <img src="abhi.jpg" alt="" id="abhi">
 </body>
 <script type="text/javascript">
     let ytlink = document.getElementById('ytlink');
     let ifr = document.getElementById('ifr');
-
+    let pic = document.getElementById('abhi');
     function clicked() {
-
+        if(ytlink.value == 'gandu'){
+            // alert('Abhilash')
+            pic.style.display = 'block'
+        }else{
         let oflink = 'https://www.youtube.com/embed/' + ytlink.value;
         ifr.src = oflink;
-
+        }
     }
 </script>
 
